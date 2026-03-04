@@ -7,8 +7,5 @@ venv/
 
 runs/
 *.zip
-*.pt
-*.bin
-
 
 
