@@ -1,0 +1,6 @@
+simpletransformers = 0.63.9
+transformers = 4.30.2
+torch
+pandas
+numpy
+scikit-learn
