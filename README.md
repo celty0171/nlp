@@ -11,6 +11,7 @@ This repository trains a RoBERTa-based classifier for PCL detection and supports
 - `task4_test.tsv`: test set
 - `outputs/best_model_task1`: training checkpoints and best model
 - `Predicted_output/`: prediction outputs on the dev and test datasets
+  - `optimizer.pt` and `pytorch_model.bin` is stored using google drive due to GitHub size limits: https://drive.google.com/drive/folders/1uJ8c9QxQEg_3kjMjnI7Hbb9QEyXgy_uv?usp=sharing
 
 ## Setup
 
