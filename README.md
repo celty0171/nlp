@@ -41,7 +41,7 @@ This runs training first (dev output), then test inference, and writes both file
 python BestModel/roberta_large.py
 ```
 
-This trains the model and writes dev predictions to `prediction/results/dev.txt` by default.
+This trains the model and writes dev predictions to `Predicted_output/dev.txt` by default.
 
 ## Test Inference Only
 
@@ -49,7 +49,7 @@ This trains the model and writes dev predictions to `prediction/results/dev.txt`
 python BestModel/roberta_large.py --mode test
 ```
 
-This loads the best available checkpoint and writes test predictions to `prediction/results/test.txt`.
+This loads the best available checkpoint and writes test predictions to `Predicted_output/test.txt` by default.
 
 
 ## Notes

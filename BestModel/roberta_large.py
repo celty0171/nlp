@@ -88,10 +88,9 @@ def train(dev_result_path=None):
     if dev_result_path:
         dev_path = dev_result_path
     else:
-        results_dir = os.path.join(project_root, "prediction", "results")
-        os.makedirs(results_dir, exist_ok=True)
-        dev_path = os.path.join(results_dir, "dev.txt")
-    os.makedirs(os.path.dirname(dev_path), exist_ok=True)
+        dev_path = os.path.join(project_root, "Predicted_output", "dev.txt")
+    dev_dir = os.path.dirname(dev_path) or "."
+    os.makedirs(dev_dir, exist_ok=True)
 
     dpm = DontPatronizeMe(project_root, project_root)
     dpm.load_task1()
@@ -102,7 +101,11 @@ def train(dev_result_path=None):
     data = dpm.train_task1_df
     trdf1 = build_task1_df(data, trids)
     tedf1 = build_task1_df(data, teids)
-    tedf1 = tedf1.sample(frac=1, random_state=seed).reset_index(drop=True)
+    tedf1.to_csv(
+        os.path.join(project_root, "dev_dontpatronizeme_pcl.tsv"),
+        sep="\t",
+        index=False,
+    )
     training_set1 = trdf1.sample(frac=1, random_state=seed).reset_index(drop=True)
     pos_df = training_set1[training_set1.label == 1]
     neg_df = training_set1[training_set1.label == 0]
@@ -163,9 +166,7 @@ def predict_test(test_result_path=None):
     if test_result_path:
         test_path_out = test_result_path
     else:
-        results_dir = os.path.join(project_root, "prediction", "results")
-        os.makedirs(results_dir, exist_ok=True)
-        test_path_out = os.path.join(results_dir, "test.txt")
+        test_path_out = os.path.join(project_root, "Predicted_output", "test.txt")
     os.makedirs(os.path.dirname(test_path_out), exist_ok=True)
 
     test_path = os.path.join(project_root, "task4_test.tsv")
