@@ -6,7 +6,9 @@ This repository trains a RoBERTa-based classifier for PCL detection and supports
 - `BestModel/roberta_large.py`: main training and inference script
 - `dont_patronize_me.py`: dataset loader
 - `train_semeval_parids-labels.csv`, `dev_semeval_parids-labels.csv`: ID lists
-- `train_dontpatronizeme_pcl.tsv`, `dev_dontpatronizeme_pcl.tsv`, `task4_test.tsv`: raw datasets
+- `dontpatronizeme_pcl.tsv`: raw dataset
+- `train_dontpatronizeme_pcl.tsv`, `dev_dontpatronizeme_pcl.tsv`: training and dev sets reconstructed by ID matching with raw dataset
+- `task4_test.tsv`: test set
 - `outputs/best_model_task1`: training checkpoints and best model
 - `Predicted_output/`: prediction outputs on the dev and test datasets
 
