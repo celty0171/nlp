@@ -10,6 +10,8 @@ This repository trains a RoBERTa-based classifier for PCL detection and supports
 - `train_dontpatronizeme_pcl.tsv`, `dev_dontpatronizeme_pcl.tsv`: training and dev sets reconstructed by ID matching with raw dataset
 - `task4_test.tsv`: test set
 - `Predicted_output/`: prediction outputs on the dev and test datasets
+  - `optimizer.pt` and `pytorch_model.bin` is stored externally due to GitHub size limits: https://drive.google.com/drive/folders/1uJ8c9QxQEg_3kjMjnI7Hbb9QEyXgy_uv?usp=sharing
+
 - `outputs/best_model_task1`: training checkpoints and best model
   - `optimizer.pt` and `pytorch_model.bin` is stored using google drive due to GitHub size limits: https://drive.google.com/drive/folders/1uJ8c9QxQEg_3kjMjnI7Hbb9QEyXgy_uv?usp=sharing
 
