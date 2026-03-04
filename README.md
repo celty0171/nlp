@@ -54,3 +54,4 @@ This loads the best available checkpoint and writes test predictions to `predict
 - Please use python 3.10 to run the code.
 - CUDA is used automatically if available.
 - Best checkpoint is saved under `outputs/best_model_task1`.
+- You may need to manually install PyTorch using pip.
